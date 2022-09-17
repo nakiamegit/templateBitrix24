@@ -44,7 +44,8 @@ CModule::IncludeModule('intranet');
 	"socialnetwork.slider",
 	"calendar.sliderloader",
 	"ui.notification",
-	"ui.info-helper"
+	"ui.info-helper",
+	"ui.design-tokens",
 ]);
 
 Loc::loadMessages($_SERVER['DOCUMENT_ROOT'] . '/bitrix/templates/' . SITE_TEMPLATE_ID . '/header.php');
@@ -423,8 +424,14 @@ if ($isBitrix24Cloud)
 						);
 						?>
 						<div class="header-item" id="header-buttons">
-							<?
-							$APPLICATION->IncludeComponent("bitrix:intranet.license.widget", "", []);
+							<?php
+							$APPLICATION->IncludeComponent(
+								IsModuleInstalled('bitrix24') ?
+									"bitrix:bitrix24.license.widget" :
+									"bitrix:intranet.license.widget",
+								"",
+								[]
+							);
 							$APPLICATION->IncludeComponent("bitrix:intranet.invitation.widget", "", []);
 							?>
 						</div>
@@ -555,9 +562,10 @@ if ($isBitrix24Cloud)
 													"ALLOW_MULTI_SELECT" => "N"
 												),
 												false
-											);
-
-											$APPLICATION->IncludeComponent("bitrix:ui.toolbar", '', []); ?>
+											);?><?
+											?><div class="page-toolbar"><?
+												$APPLICATION->IncludeComponent("bitrix:ui.toolbar", '', []);
+											?></div>
 										</div>
 										<div class="pagetitle-below"><?$APPLICATION->ShowViewContent("below_pagetitle")?></div>
 									</div>

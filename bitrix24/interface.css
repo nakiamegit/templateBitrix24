@@ -6,7 +6,8 @@ body div.bx-interface-form input.webform-button-text {
 	color: #7a818a;
 	display: inline;
 	height: auto;
-	font-family: "OpenSans-Bold", Helvetica, Arial, sans-serif;
+	font-family: var(--ui-font-family-secondary, var(--ui-font-family-open-sans));
+	font-weight: var(--ui-font-weight-bold, 700);
 	font-size: 12px;
 	line-height: 47px;
 	text-shadow: none !important;
@@ -97,7 +98,7 @@ body div.bx-interface-form input.webform-button-text {
 	height: 288px;
 	background-color: #ffffff;
 	border: 1px solid #bbcfd5;
-	border-radius: 3px;
+	border-radius: var(--ui-border-radius-sm, 3px);
 }
 
 .bx-file-dialog-content-wrap {
@@ -147,18 +148,6 @@ body div.bx-interface-form input.webform-button-text {
 	font: normal normal normal 12px/normal "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.webform-main-fields {
-	margin-bottom: 13px;
-	background: #f8f3da;
-	border: 1px solid;
-	border-color: #ded8b7 #ebe5c9 #f4efd5 #ebe5c9;
-	border-radius: 1px;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-}
-
 .webform-main-fields .webform-round-corners {
 	-webkit-border-radius: 1px;
 	border-radius: 1px;
@@ -181,17 +170,6 @@ body div.bx-interface-form input.webform-button-text {
 	background: none;
 }
 
-.webform-additional-fields, .webform-additional-block {
-	background: #eaeff0;
-	border: 1px solid;
-	border-color: #b6bdbe #cbd3d4 #d6dfe0 #c9d1d2;
-	-webkit-border-radius: 1px;
-	border-radius: 1px;
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-}
-
 .webform-additional-fields .webform-round-corners {
 	background: #e1e9ea;
 	-webkit-border-radius: 1px;
@@ -205,17 +183,10 @@ body div.bx-interface-form input.webform-button-text {
 .webform-field-textbox input, .webform-field-textbox-double input {
 	color: #8d9aa9;
 }
-
 .webform-field-textbox-inner, .webform-field-combobox-inner {
-
 	border: 1px solid;
 	border-color: #b9bcbe #babec0 #c1c5c8 #bbbfc1;
-	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
-	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
-	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
-
-	-webkit-border-radius: 1px;
-	border-radius: 1px;
+	border-radius: var(--ui-field-border-radius, 1px);
 }
 
 .webform-additional-fields .webform-field-textarea {
@@ -864,7 +835,8 @@ body div.bx-interface-form input.webform-button-text {
     line-height: 14px;
     font-size: 9px;
     color: #525c69;
-    font-family: 'OpenSans-Semibold', "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: var(--ui-font-family-secondary, var(--ui-font-family-open-sans));
+	font-weight: var(--ui-font-weight-semi-bold, 600);
     -moz-border-radius: 16px;
     -webkit-border-radius: 16px;
     border-radius: 16px;
@@ -1415,7 +1387,8 @@ body table.bx-edit-tab-title td.bx-form-title,
 	border-right: none;
 	border-left: none;
 	border-bottom: 1px solid rgba(82,92,105,.10);
-	font: 18px "OpenSans-Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 18px var(--ui-font-family-secondary, var(--ui-font-family-open-sans));
+	font-weight: var(--ui-font-weight-regular, 400);
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -2083,15 +2056,9 @@ body table.bx-edit-table td.bx-field-value select {
 .filter-field input.filter-interval,
 .filter-field input.search-tags {
 	height: 16px;
-	padding: 2px;
+	padding: 4px;
 	border: 1px solid #b9bcbe;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-khtml-border-radius: 2px;
-	border-radius: 2px;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14) inset;
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14) inset;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14) inset;
+	border-radius: var(--ui-field-border-radius, 2px);
 }
 
 .filter-block-title {
@@ -2417,13 +2384,7 @@ span.webform-field-textbox-inner {
 	height: 16px;
 	padding: 2px;
 	border: 1px solid #b9bcbe;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-khtml-border-radius: 2px;
-	border-radius: 2px;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14) inset;
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14) inset;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14) inset;
+	border-radius: var(--ui-field-border-radius, 2px);
 }
 
 span.webform-field-textbox-inner {
@@ -2549,7 +2510,7 @@ body .bx-tm-popup-clock-wnd-subtitle {
 
 body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 	border: 1px solid #c6cdd3;
-	border-radius: 2px;
+	border-radius: var(--ui-border-radius-2xs, 2px);
 	color: #555;
 	margin-top: 4px;
 	font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2596,6 +2557,8 @@ body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 	background-color: #FFFFFF;
 	border: 1px solid #c6cdd3;
 	padding: 10px;
+	border-radius: var(--ui-border-radius-xs, 0);
+	border-top-left-radius: 0;
 }
 
 .tm-tab-content form {
@@ -2618,7 +2581,7 @@ body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 
 .tm-popup-report-textarea {
 	border: 1px solid #c6cdd3;
-	border-radius: 2px;
+	border-radius: var(--ui-border-radius-2xs, 2px);
 	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 7px;
@@ -2634,7 +2597,6 @@ body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 	background-color: #ecf2f3;
 	border: 1px solid #fff;
 	border-bottom: none;
-	border-radius: 2px 2px 0 0;
 	color: #535c69;
 	height: 41px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2721,7 +2683,6 @@ body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 }
 
 .tm-popup-section {
-	border-radius: 0;
 	height: 39px;
 }
 
@@ -2818,7 +2779,7 @@ body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 .tm-popup-event-form .tm-popup-event-form-textbox_am_pm,
 .tm-popup-task-form .tm-popup-task-form-textbox_am_pm {
 	border: 1px solid #c6cdd3;
-	border-radius: 2px;
+	border-radius: var(--ui-border-radius-2xs, 2px);
 	color: #555;
 	font: 14px/normal "Helvetica Neue", Helvetica, Arial, sans-serif;
 	height: 36px;
@@ -2876,7 +2837,7 @@ body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 .tm-popup-task-form-disabled .tm-popup-task-form-submit {
 	background: transparent;
 	border: 1px solid #c6cdd3;
-	border-radius: 2px;
+	border-radius: var(--ui-border-radius-2xs, 2px);
 	cursor: pointer;
 	margin-left: 10px;
 	height: 36px;
@@ -3115,7 +3076,8 @@ body .bx-tm-popup-clock-wnd .bx-tm-popup-clock-wnd-report textarea {
 .webform-small-button.tm-webform-button-play .webform-small-button-text,
 .webform-small-button.tm-popup-main-button .webform-small-button-text {
 	position: relative;
-	font: 13px/40px "OpenSans-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 13px/40px var(--ui-font-family-secondary, var(--ui-font-family-open-sans));
+	font-weight: var(--ui-font-weight-bold, 700);
 	display: inline-block;
 }
 
@@ -3312,6 +3274,7 @@ div.bx-clock-div-inline .bxc-clock-cont {
 	font-weight: bold;
 	padding: 0;
 	position: relative;
+	border-radius: var(--ui-border-radius-2xs);
 }
 
 .bx-tm-popup-edit-clock-wnd .bx-tm-report-caption {
@@ -3595,6 +3558,7 @@ body div.bx-clock-div table.bxc-cus-sel-tbl td:first-child input,
 	width: 28px !important;
 	outline: medium none;
 	box-sizing: content-box;
+	border-radius: var(--ui-border-radius-2xs, 0);
 }
 
 .bx-tm-report-edit {
@@ -3606,7 +3570,8 @@ body div.bx-clock-div table.bxc-cus-sel-tbl td:first-child input,
 body div.bx-clock-div span.double-dot {
 	color: #b6b9bd;
 	margin: 0;
-	font: normal 18px/30px "OpenSans-Bold", Helvetica, Arial, sans-serif;
+	font: normal 18px/30px var(--ui-font-family-secondary, var(--ui-font-family-open-sans));
+	font-weight: var(--ui-font-weight-bold, 700);
 	padding: 0;
 	width: 23px;
 }
@@ -3870,6 +3835,7 @@ body .tm-report-popup-people {
 	font: 12px/15px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #555;
 	background: #dbecf4;
+	border-radius: var(--ui-border-radius-xs);
 }
 
 body .tm-report-popup-people .tm-report-popup-r0,
@@ -4094,6 +4060,7 @@ body .tm-popup-estimate-item {
 	background: #fff;
 	margin-bottom: 20px;
 	border: 1px solid #c6cdd3;
+	border-radius: var(--ui-border-radius-xs);
 }
 
 body .tm-report-popup .tm-popup-section-title-line {
@@ -4160,10 +4127,7 @@ body .tm-report-popup-items td.tm-report-popup-events .tm-popup-events {
 	padding: 0;
 	margin: 10px 0 0;
 	border: 1px solid #bcd0d5;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
+	border-radius: var(--ui-border-radius-xs, 3px);
 	overflow-y: auto;
 	background: #ffffff;
 }
@@ -4313,7 +4277,7 @@ body .tm-report .tm-report-right-border {
 /*==================TASK CRM===================*/
 
 .tm-info-bar {
-	border-radius: 2px;
+	border-radius: var(--ui-border-radius-2xs, 2px);
 	height: 39px;
 	margin: 15px 0 9px;
 	padding: 0 6px;
@@ -4321,7 +4285,8 @@ body .tm-report .tm-report-right-border {
 	border: none;
 	line-height: 39px;
 	color: #535c69;
-	font-family: "OpenSans-Bold", Helvetica, Arial, sans-serif;
+	font-family: var(--ui-font-family-secondary, var(--ui-font-family-open-sans));
+	font-weight: var(--ui-font-weight-bold, 700);
 	font-size: 14px;
 }
 
@@ -4383,7 +4348,8 @@ body .tm-report .tm-report-right-border {
 
 .tm-info-bar-time {
 	height: 39px;
-	font-family: "OpenSans-Regular", Helvetica, Arial, sans-serif;
+	font-family: var(--ui-font-family-secondary, var(--ui-font-family-open-sans));
+	font-weight: var(--ui-font-weight-regular, 400);
 	float: right;
 	padding: 0 0 0 20px;
 	position: relative;
@@ -4800,7 +4766,6 @@ body .tm-report .tm-report-right-border {
 .bx-lm-box .bx-finder-box-item-t7-selected:hover,
 .bx-lm-box-tab-content-department .bx-finder-company-department-employee-selected:hover {
 	background: #d6f1fb;
-	border-radius: 1px;
 }
 
 .bx-lm-box .bx-finder-box-item-t5-avatar,
@@ -5045,15 +5010,9 @@ body .tm-report .tm-report-right-border {
 
 /* ========================= html editor  ======================== */
 
-.bxhtmled-toolbar-cnt {
-	background: #f8fafa;
-	border: none;
-}
-
 .feed-add-post-block .bxhtmled-toolbar-cnt,
 .feed-comments-block .bxhtmled-toolbar-cnt {
 	background: none;
-	/*border-bottom: 1px solid #e4e4e4;*/
 	border-bottom: 1px solid rgba(130,139,149,.08);
 }
 
@@ -5061,7 +5020,6 @@ body .tm-report .tm-report-right-border {
 .bx-html-editor .bxhtmled-top-bar-select {
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	border-radius: 1px;
 }
 
 /* ======================== end html editor  ======================== */
